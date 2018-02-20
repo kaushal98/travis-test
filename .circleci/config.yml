@@ -1,4 +1,9 @@
 version: 2
-dependencies:
-    override:
-        g++ main.cpp
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      dependencies:
+        override:
+          - g++ main.cpp
