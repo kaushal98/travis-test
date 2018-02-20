@@ -1,0 +1,6 @@
+version: 2
+dependencies:
+    pre:
+        - sudo apt-get install libgstreamer1.0-dev
+        - sudo apt-get install libssl-dev
+        - cd ../Build; yes 5 | ./build.sh  
