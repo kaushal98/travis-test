@@ -1,0 +1,4 @@
+build-sdk:
+  build:
+    image: ubuntu-1604
+    dockerfile: Dockerfile

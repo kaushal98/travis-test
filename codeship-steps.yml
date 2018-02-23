@@ -1,0 +1,3 @@
+- name: conrad-sdk
+  service: build-sdk
+  command: /bin/bash -C 'cd /app/Build && yes 5 | ./build_x86_64.sh'
