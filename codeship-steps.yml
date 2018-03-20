@@ -1,3 +1,5 @@
 - name: conrad-sdk
   service: build-sdk
   command: /bin/bash -c 'cd /app/Build &&  ./build.sh'
+  command: /bin/bash -c 'echo "Testing 2nd line of command"'
+
