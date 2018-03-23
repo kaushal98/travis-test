@@ -27,8 +27,11 @@ tar -xvf sqlite-autoconf-3220000.tar.gz
 cd sqlite-autoconf-3220000
 ./configure --prefix=/usr/${CROSS} --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf  --enable-threadsafe
 make
+cd .libs/
+$AR -x libsqlite3.a
+$CC -shared *.o -o libsqlite3.so.0.8.6
 sudo make install
-cd -
+cd ../../
 echo "*******************************************"
 echo "****** Finisehed building SQLite3... ******"
 echo "*******************************************"
