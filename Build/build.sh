@@ -18,6 +18,9 @@ make
 sudo make install
 ls -l /usr/${CROSS}/lib/libcrypto*
 cd -
+echo "*******************************************"
+echo "****** Finisehed building OpenSSL... ******"
+echo "*******************************************"
 g++ main.cpp -o hello_x86_64 -lssl -lcrypto
 file hello_x86_64
 ./hello_x86_64

@@ -1,5 +1,5 @@
 #include <iostream>
-#define USE_OPENSSL
+//#define USE_OPENSSL
 #ifdef USE_OPENSSL
 #include <openssl/opensslv.h>
 #include <openssl/crypto.h>
