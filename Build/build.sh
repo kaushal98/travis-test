@@ -1,5 +1,4 @@
 #!/bin/bash
-g++ main.cpp -o hello_x86_64 -lssl -lcrypto
 echo "*******************************************"
 echo "****** Cross compiling for ARMv7L... ******"
 echo "*******************************************"
@@ -19,7 +18,9 @@ make
 sudo make install
 ls -l /usr/${CROSS}/lib/libcrypto*
 cd -
-${CROSS}-g++ -Wall -L/usr/${CROSS}/lib -I/usr/${CROSS}/include/openssl/ main.cpp -lssl -lcrypto
+g++ main.cpp -o hello_x86_64 -lssl -lcrypto
 file hello_x86_64
+./hello_x86_64
+${CROSS}-g++ -Wall -L/usr/${CROSS}/lib -I/usr/${CROSS}/include/openssl/ main.cpp -lssl -lcrypto
 file hello_arm
 
