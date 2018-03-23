@@ -13,8 +13,8 @@ export AS=${CROSS}-as
 export CC="${CROSS}-gcc -fPIC"
 export CXX="${CROSS}-g++ -fPIC"
 export LD=${CROSS}-g++ 
-./Configure --openssldir=./out/final shared Os/compiler:${CC}
+./Configure --openssldir=out/final shared Os/compiler:${CC}
 make
 make install
-ls -l
+ls -l out/final
 cd -
