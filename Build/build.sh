@@ -30,8 +30,9 @@ make
 cd .libs/
 $AR -x libsqlite3.a
 $CC -shared *.o -o libsqlite3.so.0.8.6
+cd -
 sudo make install
-cd ../../
+cd ../
 echo "*******************************************"
 echo "****** Finisehed building SQLite3... ******"
 echo "*******************************************"
