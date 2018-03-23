@@ -16,5 +16,5 @@ export LD=${CROSS}-g++
 ./Configure --openssldir=./out/final shared Os/compiler:${CC}
 make
 make install
-ls -l out/final
+ls -l
 cd -

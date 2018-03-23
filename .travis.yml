@@ -3,4 +3,4 @@ os: linux
 dist: trusty
 sudo: required
 compiler: arm-linux-gnueabihf-g++
-script: cd Build &&  ./build.sh && ./hello
+script: cd Build &&  ./build.sh && ./hello_x86_64
