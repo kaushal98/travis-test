@@ -13,8 +13,8 @@ export AS=${CROSS}-as
 export CC="${CROSS}-gcc -fPIC"
 export CXX="${CROSS}-g++ -fPIC"
 export LD=${CROSS}-g++ 
-./Configure --openssldir=out/final shared Os/compiler:${CC}
+./Configure --prefix=/usr/${CROSS} shared os/compiler:${CC}
 make
-make install
-ls -l out/final
+sudo make install
+ls -l /usr/${CROSS}/lib/libcrypto*
 cd -
