@@ -5,7 +5,6 @@ sudo: required
 compiler: g++
 
 before_install:
-    - sudo apt-get install libgstreamer1.0-dev
-    - sudo apt-get install libssl-dev zlib1g-dev
+    - sudo apt-get install libssl-dev
 
 script: cd Build &&  ./build.sh && ./hello_x86_64
