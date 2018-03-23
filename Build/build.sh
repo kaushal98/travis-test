@@ -21,6 +21,17 @@ cd -
 echo "*******************************************"
 echo "****** Finisehed building OpenSSL... ******"
 echo "*******************************************"
+echo "Building and installing SQLite3..."
+wget https://www.sqlite.org/2018/sqlite-autoconf-3220000.tar.gz
+tar -xvf sqlite-autoconf-3220000.tar.gz
+cd sqlite-autoconf-3220000
+./configure --prefix=/usr/${CROSS} --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf  --enable-threadsafe
+make
+sudo make install
+cd -
+echo "*******************************************"
+echo "****** Finisehed building SQLite3... ******"
+echo "*******************************************"
 g++ main.cpp -o hello_x86_64 -lssl -lcrypto
 file hello_x86_64
 ./hello_x86_64

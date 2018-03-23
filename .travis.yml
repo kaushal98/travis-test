@@ -7,4 +7,4 @@ compiler: g++
 before_install:
     - sudo apt-get install libssl-dev
 
-script: cd Build &&  ./build.sh && ./hello_x86_64
+script: cd Build &&  ./build.sh
