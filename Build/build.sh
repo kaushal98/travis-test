@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install {gcc,g++}-arm-linux-gnueabi{,hf}
-g++ main.cpp -o hello_x86_64
+g++ -lssl -lcrypto main.cpp -o hello_x86_64
 arm-linux-gnueabihf-g++ main.cpp -o hello_arm
 file hello_x86_64
 file hello_arm
