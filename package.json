@@ -1,0 +1,7 @@
+{
+  "name": "travis-test",
+  "version": "0.0.1",
+  "dependencies" : {
+    "rabbitmq-c" : "https://github.com/alanxz/rabbitmq-c"
+  }
+}
