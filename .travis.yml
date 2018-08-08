@@ -6,13 +6,12 @@ compiler: g++
 
 before_install:
     - sudo apt-get install libssl-dev
-
-install:
-    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
+    - sudo pip install codecov
 
 script: 
     - cd Build &&  ./build.sh
     - ./get-code-cov.sh
+    - codecov
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
