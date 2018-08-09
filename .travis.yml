@@ -18,7 +18,7 @@ install:
 script: 
     - cd Build &&  ./build.sh
     - ./get-code-cov.sh
-    - #codecov
+    - codecov
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+#    - bash <(curl -s https://codecov.io/bash)
