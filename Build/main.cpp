@@ -4,11 +4,12 @@
 #include <openssl/opensslv.h>
 #include <openssl/crypto.h>
 #endif
+#include "test.h"
 
 using namespace std;
 
 int main() {
-    std::cout << "Hello World" << std::endl;
+    printHello();
 #ifdef USE_OPENSSL
     std::cout << "OpenSSL version: " << SSLeay_version(SSLeay()) << std::endl;
 #endif

@@ -4,4 +4,3 @@ do
   gcov-5 -n -o . $filename > /dev/null; 
 done
 
-cd ../
