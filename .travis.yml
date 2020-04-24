@@ -16,14 +16,10 @@ jobs:
   include: 
     - stage: build
       script: sleep 5; echo "build armv7 "
-      name: "Build $TARGET"
     - script: sleep 5; echo "build x86_64"
-      name: "Build $TARGET"
     - stage: test
       script: sleep 5; echo "test 1 "
-      name: "Test $TARGET"
     - script: sleep 5; echo "test 2"
-      name: "Test $TARGET"
     - stage: deploy
       script: sleep 5; echo "deploy "
 
