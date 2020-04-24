@@ -6,12 +6,9 @@ os: linux
 jobs: 
   include: 
     - stage: build
-      - env:
-        - TARGET=armv7
-      - env:
-        - TARGET=x86_64
-      script: sleep 5; echo "build stage"
+      script: sleep 5; echo "build "
     - stage: test
-      script: sleep 10; echo "test stage"
-    - script: sleep 5
+      script: sleep 10; echo "test "
+    - stage: deploy
+      script: sleep 10; echo "deploy "
 
