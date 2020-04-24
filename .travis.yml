@@ -1,24 +1,26 @@
+compiler: g++
+dist: xenial
 language: cpp
 os: linux
-dist: trusty
-sudo: required
-compiler: g++
 
-before_install:
-    - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    - sudo apt-get update
-    - sudo pip install codecov
+stages:
+  - build
+  - test
+  - deploy
 
-install: 
-    # C++11
-    - sudo apt-get install g++-5
-    # Codecov
-    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
+jobs: 
+  include: 
+    - stage: build
+      script: export TARGET=armv7;sleep 1; echo "build $TARGET "
+      name: "build armv7" 
+    - script: export TARGET=x86_64;sleep 1; echo "build $TARGET"
+      name: "build x86_64" 
+    - stage: test
+      name: "Unit Tests" 
+      script: sleep 1; echo "test 1"
+    - script: sleep 1; echo "test 2"
+      name: "Integration Tests" 
+    - stage: deploy
+      name: "Deploy to Github" 
+      script: sleep 1; echo "deploy"
 
-script: 
-    - cd Build &&  ./build.sh
-    - ./get-code-cov.sh
-    - ls -l
-
-after_success: 
-    - codecov
