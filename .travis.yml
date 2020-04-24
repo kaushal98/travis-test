@@ -5,6 +5,10 @@ compiler: g++
 
 jobs:
   include:
+    - env:
+        - TARGET=armv7
+    - env:
+        - TARGET=x86_64
     - stage: test
       script: sleep 10
     - # stage name not required, will continue to use `test`
