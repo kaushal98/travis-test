@@ -7,10 +7,10 @@ jobs:
   include: 
     - stage: build
       script: sleep 5; echo "build armv7 "
-      script: sleep 5; echo "build x86_64"
+    - script: sleep 5; echo "build x86_64"
     - stage: test
       script: sleep 5; echo "test 1 "
-      script: sleep 5; echo "test 2"
+    - script: sleep 5; echo "test 2"
     - stage: deploy
       script: sleep 5; echo "deploy "
 
