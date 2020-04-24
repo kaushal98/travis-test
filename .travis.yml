@@ -4,12 +4,8 @@ dist: xenial
 compiler: g++
 
 jobs:
-    include:
-    - env:
-      - TARGET=armv7
-      - TARGET=x86_64
-    - stage: build
-       script: sleep 5; echo "$TARGET"
+  include:
     - stage: test
-       script: echo "test 1"; sleep 2
-       - script: echo "test 2"; sleep 2
+      script: sleep 10
+    - # stage name not required, will continue to use `test`
+      script: sleep 5
