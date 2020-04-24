@@ -1,16 +1,15 @@
+compiler: g++
+dist: xenial
+jobs: 
+  include: 
+    - "env - TARGET=armv7 - TARGET=x86_64"
+    - 
+      script: "sleep 5; echo \"build stage\""
+      stage: build
+    - 
+      script: "sleep 10; echo \"test stage\""
+      stage: test
+    - 
+      script: "sleep 5"
 language: cpp
 os: linux
-dist: xenial
-compiler: g++
-
-jobs:
-  include:
-    - stage: build
-         - env:
-           - TARGET=armv7
-           - TARGET=x86_64
-      script: sleep 5; echo "build stage"
-    - stage: test
-      script: sleep 10; echo "test stage"
-    - # stage name not required, will continue to use `test`
-      script: sleep 5
