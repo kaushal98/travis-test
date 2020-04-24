@@ -11,14 +11,13 @@ stages:
 jobs: 
   include: 
     - stage: build
-      script: sleep 1; echo "build armv7 "
-    - script: sleep 1; echo "build x86_64"
+      script: export TARGET=armv7;sleep 1; echo "build armv7 "
+    - script: export TARGET=x86_64;sleep 1; echo "build x86_64"
     - stage: test
       name: "Unit Tests" 
       script: sleep 1; echo "test 1"
     - script: sleep 1; echo "test 2"
       name: "Integration Tests" 
-    - script: sleep 1; echo "test 3"
     - stage: deploy
       name: "Deploy to Github" 
       script: sleep 1; echo "deploy"
