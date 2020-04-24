@@ -5,11 +5,11 @@ os: linux
 
 jobs: 
   include: 
-    - env:
-      - TARGET=armv7
-    - env:
-      - TARGET=x86_64
     - stage: build
+      - env:
+        - TARGET=armv7
+      - env:
+        - TARGET=x86_64
       script: sleep 5; echo "build stage"
     - stage: test
       script: sleep 10; echo "test stage"
