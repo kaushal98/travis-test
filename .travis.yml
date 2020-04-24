@@ -3,11 +3,11 @@ os: linux
 dist: xenial
 compiler: g++
 
-env:
-    - TARGET=armv7
-    - TARGET=x86_64
 jobs:
     include:
+    - env:
+      - TARGET=armv7
+      - TARGET=x86_64
       - stage: build
         script: sleep 20; echo "$TARGET"
       - stage: test
