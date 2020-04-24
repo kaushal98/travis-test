@@ -2,7 +2,9 @@ compiler: g++
 dist: xenial
 jobs: 
   include: 
-    - "env - TARGET=armv7 - TARGET=x86_64"
+    - "env 
+       - TARGET=armv7 
+       - TARGET=x86_64"
     - 
       script: "sleep 5; echo \"build stage\""
       stage: build
