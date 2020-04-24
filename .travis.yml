@@ -5,10 +5,6 @@ compiler: g++
 
 jobs:
   include:
-    - env:
-        - TARGET=armv7
-    - env:
-        - TARGET=x86_64
     - stage: build
       script: sleep 5; echo "build stage"
     - stage: test
