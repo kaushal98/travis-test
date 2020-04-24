@@ -3,6 +3,10 @@ dist: xenial
 language: cpp
 os: linux
 
+- env:
+  - TARGET=armv7
+  - TARGET=x86_64
+  
 jobs: 
   include: 
     - stage: build
