@@ -8,8 +8,8 @@ jobs:
     - env:
       - TARGET=armv7
       - TARGET=x86_64
-      - stage: build
-        script: sleep 20; echo "$TARGET"
-      - stage: test
-        script: echo "test 1"; sleep 5
-      - script: echo "test 2"; sleep 10
+    - stage: build
+       script: sleep 5; echo "$TARGET"
+    - stage: test
+       script: echo "test 1"; sleep 2
+       - script: echo "test 2"; sleep 2
