@@ -4,7 +4,7 @@ jobs:
   include: 
     - env:
        - TARGET=armv7 
-       - TARGET=x86_64"
+       - TARGET=x86_64
     - 
       script: "sleep 5; echo \"build stage\""
       stage: build
