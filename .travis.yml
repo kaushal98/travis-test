@@ -12,9 +12,9 @@ jobs:
   include: 
     - stage: build
       script: export TARGET=armv7;sleep 1; echo "build $TARGET "
-      name: "build $TARGET" 
+      name: "build armv7" 
     - script: export TARGET=x86_64;sleep 1; echo "build $TARGET"
-      name: "build $TARGET" 
+      name: "build x86_64" 
     - stage: test
       name: "Unit Tests" 
       script: sleep 1; echo "test 1"
