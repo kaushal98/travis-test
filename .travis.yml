@@ -13,7 +13,9 @@ jobs:
     - stage: build
       env:
         - TARGET=armv7
-      script: sleep 1; echo "build armv7 "
+      - env:
+        - TARGET=x86_64
+      script: sleep 1; echo "build $TARGET "
     - script: export TARGET=x86_64;sleep 1; echo "build x86_64"
     - stage: test
       name: "Unit Tests" 
