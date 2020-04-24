@@ -11,7 +11,9 @@ stages:
 jobs: 
   include: 
     - stage: build
-      script: export TARGET=armv7;sleep 1; echo "build armv7 "
+      - env:
+        - TARGET=armv7
+      script: sleep 1; echo "build armv7 "
     - script: export TARGET=x86_64;sleep 1; echo "build x86_64"
     - stage: test
       name: "Unit Tests" 
