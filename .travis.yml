@@ -8,19 +8,15 @@ stages:
   - test
   - deploy
 
-env:
-  - TARGET=armv7
-env:
-  - TARGET=x86_64
-        
 jobs: 
   include: 
     - stage: build
-      script: sleep 5; echo "build armv7 "
-    - script: sleep 5; echo "build x86_64"
+      script: sleep 1; echo "build armv7 "
+    - script: sleep 1; echo "build x86_64"
     - stage: test
-      script: sleep 5; echo "test 1 "
-    - script: sleep 5; echo "test 2"
+      script: sleep 1; echo "test 1 "
+    - script: sleep 1; echo "test 2"
+    - script: sleep 1; echo "test 3"
     - stage: deploy
-      script: sleep 5; echo "deploy "
+      script: sleep 1; echo "deploy "
 
