@@ -9,7 +9,9 @@ jobs:
         - TARGET=armv7
     - env:
         - TARGET=x86_64
+    - stage: build
+      script: sleep 5; echo "build stage"
     - stage: test
-      script: sleep 10
+      script: sleep 10; echo "test stage"
     - # stage name not required, will continue to use `test`
       script: sleep 5
